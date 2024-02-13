@@ -9,8 +9,9 @@ namespace Assignment__1.Models
         public int Id { get; set; }
         [Required]
         public string? Name { get; set; }
-        [EmailAddress]
+
         [Required]
-        public string? UserEmail { get; set; }
+        [DataType(DataType.EmailAddress)]
+        public string? Email { get; set; }
     }
 }
