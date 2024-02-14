@@ -5,18 +5,18 @@
 }
 
 <div class="row d-flex align-items-center justify-content-center">
-    <div class="col-md-3 card p-3 bg-black">
+    <div class="col-md-3 card p-3">
         <h2 class="text-center text-info">Login</h2>
         <form asp-action="Login" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="mb-1">
                 <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control bg-black mt-2" style="outline:none;color:antiquewhite" />
+                <input asp-for="Email" class="form-control mt-2" style="outline:none;color:antiquewhite" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="mb-1">
                 <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" class="form-control mt-2 border-none bg-black" style="outline:none;color:antiquewhite" />
+                <input asp-for="Password" class="form-control mt-2 border-none" style="outline:none;color:antiquewhite" />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
             <div class="mb-1 form-check">

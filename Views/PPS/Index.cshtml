@@ -1,0 +1,109 @@
+﻿<div class="main">
+    <div class="content">
+        <h2 style="color:grey;margin:20px 0px">Palliative Performance Scale (PPS) and Hospice</h2>
+        <span class="fst-italic" style="margin:10px 0">By <span style="color:darkblue">Eric Shaban, MD, Regional Medical Director, VITAS Healthcare</span></span>
+        <p style="margin-top:20px;line-height:30px;color:black">
+            The Palliative Performance Scale (PPS)1 can inform decisions about a patient’s hospice eligibility by helping clinicians recognize a patient's functional decline.
+
+            For oncology patients, a PPS score of 70% or below may indicate hospice eligibility.
+
+            For most other disease types, a patient with a PPS score of 50% or below may be hospice-eligible. A general way to determine this is to ask yourself: “Does the patient with advanced illness spend more than 50% of their waking hours resting (sitting and lying)?”
+        </p>
+        <span class="fst-italic" style="font-size:12px;color:black">Please note that this calculator is an approximation of PPS and does not substitute clinical judgment.</span>
+        <div class="content-min" style="color:black">
+            <h4>Palliative Performance Scale</h4>
+            <h6 style="color:dimgrey" class="text-center">Use this tool to recognize functional decline quickly and inform decisions about your patient's eligibility.</h6>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Choose a Diagnosis</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <div class="link-cont">
+                        <div class="circle" style="background-color:blue"></div>
+                        <h6>ALS</h6>
+                    </div>
+                    <div class="link-cont">
+                        <div class="circle" style="background-color:aquamarine"></div>
+                        <h6>Alzheimer's</h6>
+                    </div>
+                    <div class="link-cont">
+                        <div class="circle" style="background-color:lightseagreen"></div>
+                        <h6>Cancer</h6>
+                    </div>
+                    <div class="link-cont">
+                        <div class="circle" style="background-color:darkred"></div>
+                        <h6>Heart Disease</h6>
+                    </div>
+                    <div class="link-cont">
+                        <div class="circle" style="background-color:red"></div>
+                        <h6>HIV and AIDS</h6>
+                    </div>
+                    <div class="link-cont">
+                        <div class="circle" style="background-color:gold"></div>
+                        <h6>Liver Disease</h6>
+                    </div>
+                    <div class="link-cont">
+                        <div class="circle" style="background-color:lightcoral"></div>
+                        <h6>Lung Disease</h6>
+                    </div>
+                    <div class="link-cont">
+                        <div class="circle" style="background-color:lightblue"></div>
+                        <h6>Renal Disease</h6>
+                    </div>
+                    <div class="link-cont">
+                        <div class="circle" style="background-color:pink"></div>
+                        <h6>Sepsis</h6>
+                    </div>
+                </div>
+            </div> 
+            <div style="border:1px solid red">
+                <div class="grid-x grid-margin-x" style="width:800px">
+                    <div class="cell small-10">
+                        <div class="slider" data-slider data-initial-start="50" data-step="5">
+                            <span class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput2"></span>
+                            <span class="slider-fill" data-slider-fill></span>
+                        </div>
+                    </div>
+                    <div class="cell small-2">
+                        <input type="number" id="sliderOutput2">
+                    </div>
+                </div>
+                <div class="grid-x grid-margin-x">
+                    <div class="cell small-10">
+                        <div class="slider" data-slider data-initial-start="50" data-step="5">
+                            <span class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput2"></span>
+                            <span class="slider-fill" data-slider-fill></span>
+                        </div>
+                    </div>
+                    <div class="cell small-2">
+                        <input type="number" id="sliderOutput2"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+         <h2>Right Content</h2>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(document).foundation();
+    });
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
