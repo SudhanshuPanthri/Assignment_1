@@ -20,7 +20,7 @@ builder.Services.AddIdentity<User, IdentityRole>(
         options.Password.RequireLowercase = false;
     })
     .AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
-
+builder.Services.AddHttpClient();
 
 var app = builder.Build();
 

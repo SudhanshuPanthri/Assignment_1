@@ -67,6 +67,6 @@ public class AccountController(SignInManager<User> signInManager, UserManager<Us
     public async Task<IActionResult> Logout()
     {
         await signInManager.SignOutAsync();
-        return RedirectToAction("Index", "Home");
+        return RedirectToAction("Login", "Account");
     }
 }

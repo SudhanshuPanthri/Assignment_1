@@ -3,8 +3,9 @@
 
 <ul class="navbar-nav">
     @if (signInManager.IsSignedIn(User))
-    {
+    {   <a>News</a>
         <li>@User.Identity!.Name</li>
+        <a asp-action="Logout" asp-controller="Account">Logout</a>
     }
     else
     {
