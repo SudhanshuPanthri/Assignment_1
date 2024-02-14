@@ -20,7 +20,7 @@ namespace Assignment__1.Controllers
                 List<NewsArticle> news = new List<NewsArticle>();
                 HttpClient client = new HttpClient();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                HttpResponseMessage response = await client.GetAsync("https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=5a7a3f934a99402c892fa400afa2acbf").ConfigureAwait(false);
+                HttpResponseMessage response = await client.GetAsync("https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=64df9ca2459f42be8b83c9927ea64454").ConfigureAwait(false);
 
                 if (response.IsSuccessStatusCode)
                 {
