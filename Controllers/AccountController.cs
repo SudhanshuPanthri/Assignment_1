@@ -1,5 +1,6 @@
 ﻿using Assignment__1.Models;
 using Assignment__1.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,20 +14,24 @@ public class AccountController(SignInManager<User> signInManager, UserManager<Us
     }
 
     [HttpPost]
+    [AllowAnonymous]
     public async Task<IActionResult> Login(LoginVM model)
     {
         if (ModelState.IsValid)
         {
             //login
-            var result = await signInManager.PasswordSignInAsync(model.Email!, model.Password!, model.RememberMe, false);
+            var result = await signInManager.PasswordSignInAsync(model.Email!, model.Password!, model.RememberMe, lockoutOnFailure: false);
 
             if (result.Succeeded)
             {
                 return RedirectToAction("Index", "Home");
             }
-
-            ModelState.AddModelError("", "Invalid login attempt");
-            return View(model);
+            else
+            {
+                ModelState.AddModelError("", "Invalid login attempt");
+                return View(model);
+            }
+            
         }
         return View(model);
     }

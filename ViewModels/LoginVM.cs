@@ -4,8 +4,8 @@ namespace Assignment__1.ViewModels;
 
 public class LoginVM
 {
-    [Required(ErrorMessage ="Email is required.")]
-    [DataType(DataType.EmailAddress)]
+    [Required(ErrorMessage ="Username is required.")]
+    [EmailAddress]
     public string? Email { get; set; }
 
     [Required(ErrorMessage ="Password is required.")]
