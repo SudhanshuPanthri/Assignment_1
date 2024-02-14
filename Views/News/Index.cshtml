@@ -1,11 +1,14 @@
 ﻿@model IEnumerable<NewsArticle>
 
 <div class="row">
-    <h2>Hello, @User.Identity.Name</h2>
-    <h5 id="time"></h5>
+    <div class="text-center mb-4 row justify-content-start align-items-center">
+        <h2 class="text-capitalize col-10 text-start">Hello, @User.Identity.Name</h2>
+        <h5 id="time" class="col-2 text-end" style="font-size:14px"></h5>
+    </div>
+    <h4>Today's News</h4>
     @foreach(var item in Model)
     {
-     <div class="card m-4" style="width: 600px;">
+     <div class="card m-4 bg-dark" style="width: 600px;">
           <div class="card-divider bg-danger">
             <h5 class="m-4">@item.Title</h5>
           </div>
@@ -15,9 +18,9 @@
             <p class="m-4">@item.content</p>
           </div>
           <div class="card-divider">
-              <a href=@item.url target="_blank">Read More.</a>
+              <a class="text-decoration-none m-4" href=@item.url target="_blank">Read More.</a>
           </div>
-            <h5>By @item.Author at <span class="text-sm-center">@item.publishedAt</span></h5>
+            <h5 style="font-size:14px;color:gold;" class="m-4">By @item.Author at <span class="text-sm-center">@item.publishedAt</span></h5>
     </div>
     } 
 </div>
@@ -25,7 +28,7 @@
 <script>
     function setTime() {
         var time = new Date().toLocaleTimeString();
-        $("#time").text(time);
+        $("#time").text("Current Time: "+time);
     }
 
     setInterval(() => {

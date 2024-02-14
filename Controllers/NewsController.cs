@@ -2,12 +2,12 @@
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Net.Http.Headers;
-using System.Net.Http.Formatting;
-using System.Security.Cryptography.Xml;
+using Microsoft.AspNetCore.Authorization;
 using Newtonsoft.Json;
 
 namespace Assignment__1.Controllers
 {
+    [Authorize]
     public class NewsController : Controller
     {
             public async Task<IActionResult> Index()
@@ -32,13 +32,6 @@ namespace Assignment__1.Controllers
                         news.AddRange(_newsList.NewsArticles);
                     }
                 }
-
-                foreach(var item in news)
-                {
-                    Console.WriteLine(item.Author);
-                    Console.WriteLine(item.Title);
-                }
-
                 return news;
             }
     }
