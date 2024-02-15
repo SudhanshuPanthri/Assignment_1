@@ -1,4 +1,6 @@
-﻿<div class="main">
+﻿<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css">
+
+<div class="main">
     <div class="content">
         <h2 style="color:grey;margin:20px 0px">Palliative Performance Scale (PPS) and Hospice</h2>
         <span class="fst-italic" style="margin:10px 0">By <span style="color:darkblue">Eric Shaban, MD, Regional Medical Director, VITAS Healthcare</span></span>
@@ -103,12 +105,13 @@
         </div>
     </div>
     <div class="right">
-         <h2>Right Content</h2>
-        <div class="range-slider" data-slider data-options="step: 20;" style="border:1px solid red;">
-            <span class="range-slider-handle" role="slider" tabindex="0"></span>
-            <span class="range-slider-active-segment"></span>
-            <input type="hidden">
-        </div>
+         <p>+ VITAS Advantage</p>
+         <p>+ how to refer a patient to hospice</p>
+         <p>+ hospice and palliative care eligibilty guideliness</p>
+         <p>+ benefits of hospice and palliative care</p>
+         <p>+ Education and training</p>
+         <p>+ medical hospice benefit & physical billing</p>
+         <p>+ partner organizations</p>
     </div>
 </div>
 <div class="footer">
@@ -116,9 +119,10 @@
     <span>844.204.2469</span>
     <span>Frequently Asked Questions</span>
 </div>
-@* <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script> *@
 
+<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js"></script>
 <script>
+
     var children = [].slice.call(document.querySelector('.slider-wrapper').getElementsByTagName('button'), 0);
     var elemnts = new Array(children.length);
     var arrayLength = children.length;
@@ -144,5 +148,12 @@
             }
         });
     });
+
+    var buttons = [].slice.call(document.querySelector('.slider-wrapper').getElementsByTagName('button'), 0);
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", () => {
+            console.log("Clicked");
+        })
+    }
 
 </script>

@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "suj/jue/8SqOId9jGKCpI5sY4NAZlrOdLlLcyR7Rdv0ctPJ7VFNuek18YzRTOg/YFthHXZ3mm/XsgorbXHCqZg==",
+  "dgSpecHash": "+Uc7Fs5dlJxLaiioUszt9iz+0XMMq+QeFOvT2HFVLM42nZEKI67rTkpejyJxrZX180IXHR9tQ6Xih2uQEOst2A==",
   "success": true,
   "projectFilePath": "C:\\Projects\\.Net MVC Projects\\Assignment__1\\Assignment__1\\Assignment__1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\foundation-sites\\6.5.3\\foundation-sites.6.5.3.nupkg.sha512",
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\jquery\\2.2.0\\jquery.2.2.0.nupkg.sha512",
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\microsoft.aspnet.webapi.client\\6.0.0\\microsoft.aspnet.webapi.client.6.0.0.nupkg.sha512",
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.1\\microsoft.aspnetcore.cryptography.internal.8.0.1.nupkg.sha512",
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.1\\microsoft.aspnetcore.cryptography.keyderivation.8.0.1.nupkg.sha512",
@@ -86,7 +88,19 @@
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\system.threading.channels\\6.0.0\\system.threading.channels.6.0.0.nupkg.sha512",
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+    "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\what-input\\2.0.1\\what-input.2.0.1.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1602",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "foundation-sites 6.5.3 does not provide an inclusive lower bound for dependency what-input. An approximate best match of what-input 2.0.1 was resolved.",
+      "libraryId": "what-input",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
