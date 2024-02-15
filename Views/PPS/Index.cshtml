@@ -13,97 +13,120 @@
         <div class="content-min" style="color:black">
             <h4>Palliative Performance Scale</h4>
             <h6 style="color:dimgrey" class="text-center">Use this tool to recognize functional decline quickly and inform decisions about your patient's eligibility.</h6>
-            <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Choose a Diagnosis</button>
-                <div id="myDropdown" class="dropdown-content">
-                    <div class="link-cont">
+            <div class="select-menu">
+                <div class="select-btn">
+                    <span class="sBtn-text">Choose a Diagnosis</span>
+                </div>
+                <ul class="options">
+                    <li class="option">
                         <div class="circle" style="background-color:blue"></div>
-                        <h6>ALS</h6>
-                    </div>
-                    <div class="link-cont">
+                        <div class="text">ALS</div>
+                    </li>
+                    <li class="option">
                         <div class="circle" style="background-color:aquamarine"></div>
-                        <h6>Alzheimer's</h6>
-                    </div>
-                    <div class="link-cont">
+                        <div class="text">Alzheimer's</div>
+                    </li>
+                    <li class="option">
                         <div class="circle" style="background-color:lightseagreen"></div>
-                        <h6>Cancer</h6>
-                    </div>
-                    <div class="link-cont">
+                        <div class="text">Cancer</div>
+                    </li>
+                    <li class="option">
                         <div class="circle" style="background-color:darkred"></div>
-                        <h6>Heart Disease</h6>
-                    </div>
-                    <div class="link-cont">
+                        <div class="text">Heart Disease</div>
+                    </li>
+                    <li class="option">
                         <div class="circle" style="background-color:red"></div>
-                        <h6>HIV and AIDS</h6>
-                    </div>
-                    <div class="link-cont">
+                        <div class="text">HIV and AIDS</div>
+                    </li>
+                    <li class="option">
                         <div class="circle" style="background-color:gold"></div>
-                        <h6>Liver Disease</h6>
-                    </div>
-                    <div class="link-cont">
+                        <div class="text">Liver Disease</div>
+                    </li>
+                    <li class="option">
                         <div class="circle" style="background-color:lightcoral"></div>
-                        <h6>Lung Disease</h6>
-                    </div>
-                    <div class="link-cont">
+                        <div class="text">Lung Disease</div>
+                    </li>
+                    <li class="option">
                         <div class="circle" style="background-color:lightblue"></div>
-                        <h6>Renal Disease</h6>
-                    </div>
-                    <div class="link-cont">
+                        <div class="text">Renal Disease</div>
+                    </li>
+                    <li class="option">
                         <div class="circle" style="background-color:pink"></div>
-                        <h6>Sepsis</h6>
-                    </div>
-                </div>
+                        <div class="text">Sepsis</div>
+                    </li>
+                </ul>
             </div> 
-            <div style="border:1px solid red">
-                <div class="grid-x grid-margin-x" style="width:800px">
-                    <div class="cell small-10">
-                        <div class="slider" data-slider data-initial-start="50" data-step="5">
-                            <span class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput2"></span>
-                            <span class="slider-fill" data-slider-fill></span>
-                        </div>
-                    </div>
-                    <div class="cell small-2">
-                        <input type="number" id="sliderOutput2">
-                    </div>
-                </div>
-                <div class="grid-x grid-margin-x">
-                    <div class="cell small-10">
-                        <div class="slider" data-slider data-initial-start="50" data-step="5">
-                            <span class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput2"></span>
-                            <span class="slider-fill" data-slider-fill></span>
-                        </div>
-                    </div>
-                    <div class="cell small-2">
-                        <input type="number" id="sliderOutput2"/>
-                    </div>
-                </div>
+        </div>
+        <div class="slider-wrapper">
+            <div class="slider-container">
+                <h5>Ambulation</h5>
+                <p>Slide to see PPS Rating</p>
+                <button class="btn">slider</button>
+            </div>
+            <div class="slider-container">
+                <h5>Activity</h5>
+                <p>Slide to see PPS Rating</p>
+                <button class="btn">slider</button>
+            </div>
+            <div class="slider-container">
+                <h5>Evidence of Disease</h5>
+                <p>Slide to see PPS Rating</p>
+                <button class="btn">slider</button>
+            </div>
+            <div class="slider-container">
+                <h5>Self Care</h5>
+                <p>Slide to see PPS Rating</p>
+                <button class="btn">slider</button>
+            </div>
+            <div class="slider-container">
+                <h5>Intake</h5>
+                <p>Slide to see PPS Rating</p>
+                <button class="btn">slider</button>
+            </div>
+            <div class="slider-container">
+                <h5>Level of Consciousness</h5>
+                <p>Slide to see PPS Rating</p>
+                <button class="btn">slider</button>
             </div>
         </div>
+        <button id="calc">Calculate</button>
     </div>
     <div class="right">
          <h2>Right Content</h2>
+        <div class="range-slider" data-slider data-options="step: 20;" style="border:1px solid red;">
+            <span class="range-slider-handle" role="slider" tabindex="0"></span>
+            <span class="range-slider-active-segment"></span>
+            <input type="hidden">
+        </div>
     </div>
 </div>
+@* <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script> *@
 
 <script>
-    $(document).ready(function () {
-        $(document).foundation();
-    });
-    function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
+    var children = [].slice.call(document.querySelector('.slider-wrapper').getElementsByTagName('button'), 0);
+    var elemnts = new Array(children.length);
+    var arrayLength = children.length;
+    for (var i = 0; i < arrayLength; i++) {
+        children[i].setAttribute("disabled", true);
     }
 
-    // Close the dropdown menu if the user clicks outside of it
-    window.onclick = function (event) {
-        if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                }
+    const optionMenu = document.querySelector(".select-menu"),
+        selectBtn = optionMenu.querySelector(".select-btn"),
+        options = optionMenu.querySelectorAll(".option"),
+        sBtn_text = optionMenu.querySelector(".sBtn-text");
+
+
+    selectBtn.addEventListener("click", () => optionMenu.classList.toggle("active"));
+
+    options.forEach(option => {
+        option.addEventListener("click", () => {
+            let selectedOption = option.querySelector(".text").innerText;
+            sBtn_text.innerText = selectedOption;
+            optionMenu.classList.remove("active");
+            for (var i = 0; i < arrayLength; i++) {
+                children[i].removeAttribute("disabled");
             }
-        }
-    }
+        });
+    });
+
 </script>

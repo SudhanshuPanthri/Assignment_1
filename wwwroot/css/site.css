@@ -31,6 +31,7 @@ body {
 .content{
     width:60%;
     padding:10px;
+    color:black;
 }
 
 .content-min{
@@ -40,59 +41,6 @@ body {
     align-items:center;
     margin-top:40px;
     flex-direction:column;
-}
-
-.dropbtn {
-    background-color: #3498DB;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    width:500px;
-    border-radius:10px;
-}
-
-    /* Dropdown button on hover & focus */
-    .dropbtn:hover, .dropbtn:focus {
-        background-color: #2980B9;
-    }
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
-    margin:20px 0;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 500px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    /*background-color:black;*/
-    border-radius:10px;
-}
-
-    /* Links inside the dropdown */
-    .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
-
-        /* Change color of dropdown links on hover */
-        .dropdown-content a:hover {
-            background-color: #ddd;
-        }
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {
-    display: block;
 }
 
 .link-cont{
@@ -112,9 +60,86 @@ body {
 }
 
 .circle{
-    height:10px;
-    width:10px;
+    height:20px;
+    width:20px;
     border-radius:50%;
     /*border:1px solid black;*/
     margin-left:5px;
+}
+
+.select-menu{
+    width:400px;
+}
+
+.select-menu .select-btn{
+    display:flex;
+    height:55px;
+    background-color:peachpuff;
+    padding:20px;
+    font-weight:400;
+    border-radius:6px;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    box-shadow:0 0 5px rgba(0,0,0,0.322);
+}
+
+.select-menu .options{
+    position:relative;
+    padding:20px;
+    border-radius:6px;
+    display:none;
+    /*box-shadow:0 0 5px rgba(0,0,0,0.322);*/
+}
+
+.select-menu.active .options{
+    display:block;
+}
+
+.options .option {
+    display: flex;
+    height: 40px;
+    cursor: pointer;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    /*justify-content:flex-start;*/
+    gap: 30px;
+}
+
+
+.options .option:hover{
+    background-color:aliceblue;
+}
+
+.right{
+    color:black;
+}
+
+.btn{
+    padding:10px;
+    background-color:orange;
+    margin-top:20px;
+}
+
+.slider-container{
+    border:1px solid red;
+}
+
+#calc {
+    width: 100%;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 25px;
+    background-color: #fbcc79;
+    color: darkblue;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+#calc:hover{
+    background-color:darkblue;
+    color:white;
+    transition:all 0.3s ease-in-out;
 }
