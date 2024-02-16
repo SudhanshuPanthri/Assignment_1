@@ -64,37 +64,43 @@
                 <h5>Ambulation</h5>
                 <p>Slide to see PPS Rating</p>
                 @* <button class="btn">slider</button> *@
-                <input type="range" placeholder="Enter number" value="20"/>
+                <input type="range" placeholder="Enter number" value="0"/>
+                <span>0</span>
             </div>
             <div class="slider-container">
                 <h5>Activity</h5>
                 <p>Slide to see PPS Rating</p>
                 @* <button class="btn">slider</button> *@
-                <input type="range" placeholder="Enter number" value="20" />
+                <input type="range" placeholder="Enter number" value="0" />
+                <span>0</span>
             </div>
             <div class="slider-container">
                 <h5>Evidence of Disease</h5>
                 <p>Slide to see PPS Rating</p>
                 @* <button class="btn">slider</button> *@
-                <input type="range" placeholder="Enter number" value="20" />
+                <input type="range" placeholder="Enter number" value="0" />
+                <span>0</span>
             </div>
             <div class="slider-container">
                 <h5>Self Care</h5>
                 <p>Slide to see PPS Rating</p>
                 @* <button class="btn">slider</button> *@
-                <input type="range" placeholder="Enter number" value="20" />
+                <input type="range" placeholder="Enter number" value="0" />
+                <span>0</span>
             </div>
             <div class="slider-container">
                 <h5>Intake</h5>
                 <p>Slide to see PPS Rating</p>
                 @* <button class="btn">slider</button> *@
-                <input type="range" placeholder="Enter number" value="20" />
+                <input type="range" placeholder="Enter number" value="0" />
+                <span>0</span>
             </div>
             <div class="slider-container">
                 <h5>Level of Consciousness</h5>
                 <p>Slide to see PPS Rating</p>
                 @* <button class="btn">slider</button> *@
-                <input type="range" placeholder="Enter number" value="20" />
+                <input type="range" placeholder="Enter number" value="0" />
+                <span>0</span>
             </div>
         </div>
         <button id="calc">Calculate</button>
@@ -180,9 +186,11 @@
     let items = [].slice.call(document.querySelector('.slider-wrapper').getElementsByTagName('div'), 0);
     for (let k = 0; k < items.length; k++) {
         let text = items[k].getElementsByTagName("p");
+        let inpText = items[k].getElementsByTagName("span");
         // console.log(text);
         let inp = items[k].getElementsByTagName("input");
         inp[0].addEventListener("change", () => {
+            inpText[0].innerText = inp[0].value;
             if (inp[0].value <= 30) {
                 text[0].innerText = "Totally Bed Bound";
             }
@@ -201,7 +209,6 @@
             else {
                 text[0].innerText = "default"
             }
-            
             sum += parseInt(inp[0].value);
         })  
     }
