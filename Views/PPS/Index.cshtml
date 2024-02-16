@@ -64,31 +64,37 @@
                 <h5>Ambulation</h5>
                 <p>Slide to see PPS Rating</p>
                 <button class="btn">slider</button>
+                <input type="number" placeholder="Enter number" value="20"/>
             </div>
             <div class="slider-container">
                 <h5>Activity</h5>
                 <p>Slide to see PPS Rating</p>
                 <button class="btn">slider</button>
+                <input type="number" placeholder="Enter number" value="20" />
             </div>
             <div class="slider-container">
                 <h5>Evidence of Disease</h5>
                 <p>Slide to see PPS Rating</p>
                 <button class="btn">slider</button>
+                <input type="number" placeholder="Enter number" value="20" />
             </div>
             <div class="slider-container">
                 <h5>Self Care</h5>
                 <p>Slide to see PPS Rating</p>
                 <button class="btn">slider</button>
+                <input type="number" placeholder="Enter number" value="20" />
             </div>
             <div class="slider-container">
                 <h5>Intake</h5>
                 <p>Slide to see PPS Rating</p>
                 <button class="btn">slider</button>
+                <input type="number" placeholder="Enter number" value="20" />
             </div>
             <div class="slider-container">
                 <h5>Level of Consciousness</h5>
                 <p>Slide to see PPS Rating</p>
                 <button class="btn">slider</button>
+                <input type="number" placeholder="Enter number" value="20" />
             </div>
         </div>
         <button id="calc">Calculate</button>
@@ -124,10 +130,17 @@
 <script>
 
     var children = [].slice.call(document.querySelector('.slider-wrapper').getElementsByTagName('button'), 0);
-    var elemnts = new Array(children.length);
+    // var elemnts = new Array(children.length);
     var arrayLength = children.length;
     for (var i = 0; i < arrayLength; i++) {
         children[i].setAttribute("disabled", true);
+    }
+
+    var inputs = [].slice.call(document.querySelector('.slider-wrapper').getElementsByTagName('input'), 0);
+    // var elemnts = new Array(inputs.length);
+    var arrayLength = inputs.length;
+    for (var i = 0; i < arrayLength; i++) {
+        inputs[i].setAttribute("disabled", true);
     }
 
     const optionMenu = document.querySelector(".select-menu"),
@@ -137,6 +150,8 @@
 
 
     selectBtn.addEventListener("click", () => optionMenu.classList.toggle("active"));
+    let calcBtn = document.querySelector("#calc");
+    calcBtn.setAttribute("disabled",true);
 
     options.forEach(option => {
         option.addEventListener("click", () => {
@@ -145,6 +160,8 @@
             optionMenu.classList.remove("active");
             for (var i = 0; i < arrayLength; i++) {
                 children[i].removeAttribute("disabled");
+                inputs[i].removeAttribute("disabled");
+                calcBtn.removeAttribute("disabled");
             }
         });
     });
@@ -156,4 +173,17 @@
         })
     }
 
+    //this code is responsible for getting the data from inputs of every div andmanipulating the p tag of every div on certain conditions
+
+    let sum = 0;
+
+    let items = [].slice.call(document.querySelector('.slider-wrapper').getElementsByTagName('div'), 0);
+    for (let k = 0; k < items.length; k++) {
+        let inp=items[k].getElementsByTagName("input");
+        sum += parseInt(inp[0].value);
+    }
+
+    calcBtn.addEventListener("click", () => {
+        console.log(sum);
+    })
 </script>
