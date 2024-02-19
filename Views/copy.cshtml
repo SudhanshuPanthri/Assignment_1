@@ -1,5 +1,4 @@
-﻿<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css">
-
+﻿
 <div class="main">
     <div class="content">
         <h2 style="color:grey;margin:20px 0px">Palliative Performance Scale (PPS) and Hospice</h2>
@@ -63,54 +62,99 @@
             <div class="slider-container">
                 <h5>Ambulation</h5>
                 <p>Slide to see PPS Rating</p>
-                <div style="display:flex;width:100%;gap:20px;justify-content:flex-start;align-items:center">
-                    <input type="range" placeholder="Enter number" value="0" step="10" style="width:80%" />
-                    <span style="padding:10px;width:10%;text-align:center">0</span>
+                <div class="grid-x grid-margin-x">
+                    <div class="cell small-10">
+                        <div class="slider" data-slider data-initial-start="0" data-step="10">
+                            <span class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput1"></span>
+                            <span class="slider-fill" data-slider-fill></span>
+                        </div>
+                    </div>
+                    <div class="cell small-2">
+                        <input type="number" id="sliderOutput1">
+                    </div>
                 </div>
             </div>
             <div class="slider-container">
                 <h5>Activity</h5>
                 <p>Slide to see PPS Rating</p>
-                <div style="display:flex;width:100%;gap:20px;justify-content:flex-start;align-items:center">
-                    <input type="range" placeholder="Enter number" value="0" step="10" style="width:80%" />
-                    <span style="padding:10px;width:10%;text-align:center">0</span>
+                <div class="grid-x grid-margin-x">
+                    <div class="cell small-10">
+                        <div class="slider" data-slider data-initial-start="0" data-step="10">
+                            <span class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput2"></span>
+                            <span class="slider-fill" data-slider-fill></span>
+                        </div>
+                    </div>
+                    <div class="cell small-2">
+                        <input type="number" id="sliderOutput2">
+                    </div>
                 </div>
             </div>
             <div class="slider-container">
                 <h5>Evidence of Disease</h5>
                 <p>Slide to see PPS Rating</p>
-                <div style="display:flex;width:100%;gap:20px;justify-content:flex-start;align-items:center">
-                    <input type="range" placeholder="Enter number" value="0" step="10" style="width:80%" />
-                    <span style="padding:10px;width:10%;text-align:center">0</span>
+                <div class="grid-x grid-margin-x">
+                    <div class="cell small-10">
+                        <div class="slider" data-slider data-initial-start="0" data-step="10">
+                            <span class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput3"></span>
+                            <span class="slider-fill" data-slider-fill></span>
+                        </div>
+                    </div>
+                    <div class="cell small-2">
+                        <input type="number" id="sliderOutput3">
+                    </div>
                 </div>
             </div>
             <div class="slider-container">
                 <h5>Self Care</h5>
                 <p>Slide to see PPS Rating</p>
-                <div style="display:flex;width:100%;gap:20px;justify-content:flex-start;align-items:center">
-                    <input type="range" placeholder="Enter number" value="0" step="10" style="width:80%" />
-                    <span style="padding:10px;width:10%;text-align:center">0</span>
+                <div class="grid-x grid-margin-x">
+                    <div class="cell small-10">
+                        <div class="slider" data-slider data-initial-start="0" data-step="10">
+                            <span class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput4"></span>
+                            <span class="slider-fill" data-slider-fill></span>
+                        </div>
+                    </div>
+                    <div class="cell small-2">
+                        <input type="number" id="sliderOutput4">
+                    </div>
                 </div>
             </div>
             <div class="slider-container">
                 <h5>Intake</h5>
                 <p>Slide to see PPS Rating</p>
-                <div style="display:flex;width:100%;gap:20px;justify-content:flex-start;align-items:center">
-                    <input type="range" placeholder="Enter number" value="0" step="10" style="width:80%" />
-                    <span style="padding:10px;width:10%;text-align:center">0</span>
+                <div class="grid-x grid-margin-x">
+                    <div class="cell small-10">
+                        <div class="slider" data-slider data-initial-start="0" data-step="10">
+                            <span class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput5"></span>
+                            <span class="slider-fill" data-slider-fill></span>
+                        </div>
+                    </div>
+                    <div class="cell small-2">
+                        <input type="number" id="sliderOutput5">
+                    </div>
                 </div>
             </div>
             <div class="slider-container">
                 <h5>Level of Consciousness</h5>
                 <p>Slide to see PPS Rating</p>
-                <div style="display:flex;width:100%;gap:20px;justify-content:flex-start;align-items:center">
-                    <input type="range" placeholder="Enter number" value="0" step="10" style="width:80%" />
-                    <span style="padding:10px;width:10%;text-align:center">0</span>
+                <div class="grid-x grid-margin-x">
+                    <div class="cell small-10">
+                        <div class="slider" data-slider data-initial-start="0" data-step="10">
+                            <span class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput6"></span>
+                            <span class="slider-fill" data-slider-fill></span>
+                        </div>
+                    </div>
+                    <div class="cell small-2">
+                        <input type="number" id="sliderOutput6" />
+                    </div>
+                </div>
+                <div style="display:flex;width:100%;gap:20px;justify-content:center;align-items:center">
+                    <input type="range" step="10" style="width:87%" />
+                    <input type="number" style="width:13%" />
                 </div>
             </div>
         </div>
         <button id="calc">Calculate</button>
-        <h2 id="ppsrating" style="text-align:center;font-size:22px;text-transform:capitalize;font-weight:600;margin-top:20px"></h2>
         <div class="content-last">
             <p>
                 VITAS also uses the PPS to assess patients’ functional status and collaboratively establish palliative care plans. We provide palliative solutions for a hospice-eligible patient’s symptoms, including pain and other physical, psychosocial and spiritual symptoms.
@@ -138,21 +182,34 @@
     <span>844.204.2469</span>
     <span>Frequently Asked Questions</span>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/what-input/5.2.12/what-input.js" integrity="sha512-RgLFL8g2bsqb5KNaLbsJ2D+4/gVUieeMkuq0DRFQFUTe3o4kYREQoA40xNukkVon4lCVhQqK493eXIlZ7mfvPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js"></script>
 <script>
+    $(document).ready(function () {
+        $(document).foundation();
+    });
 
-    // var children = [].slice.call(document.querySelector('.slider-wrapper').getElementsByTagName('button'), 0);
-    // var elemnts = new Array(children.length);
-    // var arrayLength = children.length;
-    // for (var i = 0; i < arrayLength; i++) {
-    //     children[i].setAttribute("disabled", true);
+    console.log($("[data-slider]"));
+
+    $("[data-slider]").on("changed.zf.slider", function (event) {
+        console.log(event);
+    })
+
+    // var sliders1 = $("[data-slider]");
+    // for (let i = 0;i<sliders1.length;i++){
+    //     sliders1[i].addEventListener("click", () => {
+    //         console.log('hehe');
+    //     })
     // }
 
+
+
+    var sliders = [].slice.call(document.querySelector('.slider-wrapper').querySelectorAll('.slider'), 0);
     var inputs = [].slice.call(document.querySelector('.slider-wrapper').getElementsByTagName('input'), 0);
-    // var elemnts = new Array(inputs.length);
-    var arrayLength = inputs.length;
+    var arrayLength = sliders.length;
     for (var i = 0; i < arrayLength; i++) {
+        sliders[i].setAttribute("disabled", true);
         inputs[i].setAttribute("disabled", true);
     }
 
@@ -173,6 +230,7 @@
             optionMenu.classList.remove("active");
             for (var i = 0; i < arrayLength; i++) {
                 // children[i].removeAttribute("disabled");
+                sliders[i].removeAttribute("disabled");
                 inputs[i].removeAttribute("disabled");
                 calcBtn.removeAttribute("disabled");
             }
@@ -183,45 +241,39 @@
 
     let sum = 0;
 
-    let items = [].slice.call(document.querySelector('.slider-wrapper').getElementsByTagName('div'), 0);
+    let items = [].slice.call(document.querySelector('.slider-wrapper').querySelectorAll('.slider-container'), 0);
     for (let k = 0; k < items.length; k++) {
         let text = items[k].getElementsByTagName("p");
-        // console.log(text);
-        let inpText = items[k].getElementsByTagName("span");
-        // console.log(text);
         let inp = items[k].getElementsByTagName("input");
-        inp[0].addEventListener("change", (e) => {
-            inpText[0].innerText = inp[0].value;
-            if (inp[0].value <= 30) {
-                text[0].innerText = "Totally Bed Bound";
-                text[0].style.color = "red";
-            }
-            else if (inp[0].value > 30 && inp[0].value <= 40) {
-                text[0].innerText = "Mainly in Bed";
-                text[0].style.color = "red";
-            }
-            else if (inp[0].value > 40 && inp[0].value <= 50) {
-                text[0].innerText = "Mainly Sit/Lie";
-                text[0].style.color = "coral";
-            }
-            else if (inp[0].value > 50 && inp[0].value <= 80) {
-                text[0].innerText = "Reduced";
-                text[0].style.color = "gold";
-            }
-            else if (inp[0].value > 80 && inp[0].value <= 100) {
-                text[0].innerText = "Full";
-                text[0].style.color = "green";
-            }
-            else {
-                text[0].innerText = "default"
-            }
-            sum += parseInt(inp[0].value);
-        })
+
+        // handle[0].addEventListener("change", () => {
+        //     console.log(handle[0]);
+        //     handle[0].innerText = inp[0].value;
+        //     if (inp[0].value <= 30) {
+        //         text[0].innerText = "Totally Bed Bound";
+        //     }
+        //     else if (inp[0].value > 30 && inp[0].value <= 40) {
+        //         text[0].innerText = "Mainly in Bed";
+        //     }
+        //     else if (inp[0].value > 40 && inp[0].value <= 50) {
+        //         text[0].innerText = "Mainly Sit/Lie";
+        //     }
+        //     else if (inp[0].value > 50 && inp[0].value <= 80) {
+        //         text[0].innerText = "Reduced";
+        //     }
+        //     else if (inp[0].value > 80 && inp[0].value <= 100) {
+        //         text[0].innerText = "Full";
+        //     }
+        //     else {
+        //         text[0].innerText = "default"
+        //     }
+        //     sum += parseInt(inp[0].value);
+        // })
+        // $(document).add("changed-")
     }
 
-    let ratingEle = document.querySelector("#ppsrating");
-
     calcBtn.addEventListener("click", () => {
-        ratingEle.innerText=`PPS Rating : ${sum}`
+        console.log(sum);
     })
+
 </script>
