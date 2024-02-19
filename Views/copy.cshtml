@@ -182,17 +182,23 @@
     <span>844.204.2469</span>
     <span>Frequently Asked Questions</span>
 </div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/what-input/5.2.12/what-input.js" integrity="sha512-RgLFL8g2bsqb5KNaLbsJ2D+4/gVUieeMkuq0DRFQFUTe3o4kYREQoA40xNukkVon4lCVhQqK493eXIlZ7mfvPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/plugins/foundation.core.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/plugins/foundation.slider.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/plugins/foundation.util.keyboard.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/plugins/foundation.util.motion.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/plugins/foundation.util.touch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/plugins/foundation.util.triggers.min.js"></script>
 
 <script>
     $(document).ready(function () {
         $(document).foundation();
     });
+    // $(document).foundation();
 
-    console.log($("[data-slider]"));
-
-    $("[data-slider]").on("changed.zf.slider", function (event) {
+    $("[data-slider]").on("change", function (event) {
         console.log(event);
     })
 

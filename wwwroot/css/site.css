@@ -27,6 +27,7 @@ body {
     height:100%;
     display:flex;
     gap:40px;
+    position:relative;
 }
 
 .content{
@@ -234,6 +235,19 @@ body {
     font-weight:500;
 }
 
+.disc {
+    position: absolute;
+    top: -2px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fbcb79;
+}
+
+disc::after, ::before {
+    box-sizing: inherit;
+}
+
 @media screen and (max-width:1048px){
     .right{
         display:none;
@@ -242,4 +256,14 @@ body {
     .content{
         width:100%;
     }
+}
+
+.slide{
+    position:relative;
+}
+
+
+#slider-handle {
+    border-radius: 50%;
+    background-color: #fbcb79;
 }
