@@ -6,7 +6,7 @@ using System.Diagnostics;
 namespace Assignment__1.Controllers
 {
     [Authorize]
-    public class HomeController : Controller
+    public class HomeController : Microsoft.AspNetCore.Mvc.Controller
     {
         private readonly ILogger<HomeController> _logger;
 
