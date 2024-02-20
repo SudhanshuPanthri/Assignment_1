@@ -13,7 +13,8 @@
           "Microsoft.EntityFrameworkCore": "8.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.1",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.1",
-          "Newtonsoft.Json": "13.0.3"
+          "Newtonsoft.Json": "13.0.3",
+          "foundation-sites": "6.5.3"
         },
         "runtime": {
           "Assignment__1.dll": {}
@@ -53,6 +54,12 @@
           }
         }
       },
+      "foundation-sites/6.5.3": {
+        "dependencies": {
+          "jQuery": "2.2.0",
+          "what-input": "2.0.1"
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
@@ -61,6 +68,7 @@
           }
         }
       },
+      "jQuery/2.2.0": {},
       "Microsoft.AspNet.WebApi.Client/6.0.0": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.3",
@@ -947,7 +955,8 @@
             "fileVersion": "6.0.21.52210"
           }
         }
-      }
+      },
+      "what-input/2.0.1": {}
     }
   },
   "libraries": {
@@ -970,12 +979,26 @@
       "path": "azure.identity/1.7.0",
       "hashPath": "azure.identity.1.7.0.nupkg.sha512"
     },
+    "foundation-sites/6.5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3Q5Sj5ZBRja+WbfkmNf+jDzxJh5Uc6JDIcBlEnRsQFzDM6CGDh0vOMLbwbntpFKIQKBor31jIKzYVgpqzfBuLA==",
+      "path": "foundation-sites/6.5.3",
+      "hashPath": "foundation-sites.6.5.3.nupkg.sha512"
+    },
     "Humanizer.Core/2.14.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
+    },
+    "jQuery/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rHsE5sO10dBY/XflJwmz9bhU6f1pQpaFHSClunzXD/Vv0snvXwKSrDU9LuGAFevOPDWH20TZqjfHGYqCBC7PVg==",
+      "path": "jquery/2.2.0",
+      "hashPath": "jquery.2.2.0.nupkg.sha512"
     },
     "Microsoft.AspNet.WebApi.Client/6.0.0": {
       "type": "package",
@@ -1536,6 +1559,13 @@
       "sha512": "sha512-IXoJOXIqc39AIe+CIR7koBtRGMiCt/LPM3lI+PELtDIy9XdyeSrwXFdWV9dzJ2Awl0paLWUaknLxFQ5HpHZUog==",
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
+    },
+    "what-input/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4CY4s4b3YrHLUmHHNwg0LhkCwH2EswjkI32qCFuAciog4Tp5e2+2LQ95NKWCV6OtFPkNcT5uo1QbTkXNQm0XGg==",
+      "path": "what-input/2.0.1",
+      "hashPath": "what-input.2.0.1.nupkg.sha512"
     }
   }
 }
