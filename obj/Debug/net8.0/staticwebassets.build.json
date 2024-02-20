@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zjN/eLquKZMCInatFSbd8GrmI984jHXi0oo223/CRes=",
+  "Hash": "br8omF+0+1eXE/PwEUvSqsgKMmYmwnTF6HeVYLTLEDg=",
   "Source": "Assignment__1",
   "BasePath": "_content/Assignment__1",
   "Mode": "Default",
@@ -72,25 +72,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
-    },
-    {
-      "Identity": "C:\\Projects\\.Net MVC Projects\\Assignment__1\\Assignment__1\\wwwroot\\css\\style.scss",
-      "SourceId": "Assignment__1",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Projects\\.Net MVC Projects\\Assignment__1\\Assignment__1\\wwwroot\\",
-      "BasePath": "_content/Assignment__1",
-      "RelativePath": "css/style.scss",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\style.scss"
     },
     {
       "Identity": "C:\\Projects\\.Net MVC Projects\\Assignment__1\\Assignment__1\\wwwroot\\favicon.ico",

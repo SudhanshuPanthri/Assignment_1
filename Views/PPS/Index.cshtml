@@ -1,7 +1,7 @@
 ﻿
 <div class="main">
     <div class="reveal" id="exampleModal1" data-reveal>
-        <h1>Awesome. I Have It.</h1>
+        <h1></h1>
         <button class="close-button" data-close aria-label="Close modal" type="button">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -10,7 +10,7 @@
         <h2 style="color:grey;margin:20px 0px">Palliative Performance Scale (PPS) and Hospice</h2>
         <span class="fst-italic" style="margin:10px 0">By <span style="color:darkblue">Eric Shaban, MD, Regional Medical Director, VITAS Healthcare</span></span>
         <p style="margin-top:20px;line-height:30px;color:black">
-            The Palliative Performance Scale (PPS)1 can inform decisions about a patient’s hospice eligibility by helping clinicians recognize a patient's functional decline.
+            The Palliative Performance Scale (PPS) can inform decisions about a patient’s hospice eligibility by helping clinicians recognize a patient's functional decline.
 
             For oncology patients, a PPS score of 70% or below may indicate hospice eligibility.
 
@@ -296,14 +296,13 @@
         let inp = items[k].getElementsByTagName("input");
     }
 
-    let flag = true;
+    let flag = false;
     let inps=$(".slider-container");
     for (let i = 0; i < inps.length; i++) {
         inps[i].children[2].children[1].children[0].setAttribute("disabled", true);
         let spans=inps[i].children[2].children[0].getElementsByTagName("span");
         for (let m = 1; m < spans.length-1;m++){
             spans[m].style.left = `${(9.8 * m)}%`;
-            console.log(spans[m]);
         }
     }
 
@@ -314,9 +313,14 @@
 
     $("[data-slider]").on("moved.zf.slider", function (event) {
         var p = ($(this).parent()[0].parentElement.parentElement.getElementsByTagName("p")[0]);
-        // ($(this).parent()[0].parentElement.getElementsByTagName("input").setAttribute("disabled", true));
         var inpVal=($(this).parent()[0].parentElement.getElementsByTagName("input")[0].value);
-
+        if (inpVal <= 0) {
+            flag = false;
+        }
+        else {
+            flag = true;
+        }
+        console.log(flag);
         if (inpVal > 1 && inpVal <= 30) {
             p.innerText = "Totally Bed Bound";
         }
@@ -336,9 +340,6 @@
             p.innerText = "Slide to see PPS Rating";
         }
         sum += parseInt(inpVal);
-        if (inpVal == 0) {
-            flag = false;
-        }
     })
 
 
@@ -352,7 +353,7 @@
             modal.style.justifyContent = "center";
             modal.style.alignItems = "center";
             modal.style.color = "black";
-            h1.innerText = "Values can't be zero";
+            h1.innerText = "Please select values to see PPS Rating";
         }
         else {
             modal.style.display = "flex";
