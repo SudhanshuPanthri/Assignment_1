@@ -1,0 +1,67 @@
+﻿<div class="main2">
+    <h1>Location and service area</h1>
+    <div class="top-content">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+    <div class="bottom-content">
+        <h2>Our Care Services</h2>
+        <p>At VITAS we care for patients with an interdisciplinary team comprising a nurse, physician, aide, social worker and chaplain. Our teams design personalized care plans to ensure comfort, dignity and quality of life.</p>
+        <div class="wrapper">
+
+        </div>
+    </div>
+</div>
+
+<script>
+    let comp2obj = [{
+        title: "Hospise Care at home",
+        imgUrl: "https://newt.vitas.com/-/media/images/locations-served/location-care-services/hospice-care-at-home-location-care-services.jpg?h=128&iar=0&w=128&hash=19D129000CD2DFFE6B1AD4980B0E43F1s"
+    },
+    {
+        title: "24/7 Telecare",
+        imgUrl: "https://newt.vitas.com/-/media/images/locations-served/location-care-services/247-telecare-location-care-services.jpg?h=128&iar=0&w=128&hash=2F2DFBDBFC12ECD69D77C5D64E70410A"
+    },
+    {
+        title: "Condition Specific Care",
+        imgUrl: "https://newt.vitas.com/-/media/images/locations-served/location-care-services/condition-specific-care-location-care-services.jpg?h=128&iar=0&w=128&hash=00C104E9515828482D169FB7E4F2CAD7"
+    },
+    {
+        title: "Intensive Comfort Care",
+        imgUrl: "https://newt.vitas.com/-/media/images/locations-served/location-care-services/intensive-comfort-care-location-care-services.jpg?h=128&iar=0&w=128&hash=14142715063D3D7E6EAB5E8831B14E44"
+    },
+    {
+        title: "Veterans Care",
+        imgUrl: "https://newt.vitas.com/-/media/images/locations-served/location-care-services/veterans-care-location-care-services.jpg?h=128&iar=0&w=128&hash=ABE2890FE3309E383967B0F8283E6FDB"
+    },
+    {
+        title: "Impatient Hospise Care",
+        imgUrl: "https://newt.vitas.com/-/media/images/locations-served/location-care-services/inpatient-hospice-care-location-care-services.jpg?h=128&iar=0&w=128&hash=7A8BA29B4D5EB2BBB3F9F081C25F86C0"
+    },
+    {
+        title: "Music Therapy",
+        imgUrl: "https://newt.vitas.com/-/media/images/locations-served/location-care-services/music-therapy-location-care-services.jpg?h=128&iar=0&w=128&hash=AEF8484C33948367EAA421818D3BC821"
+    },
+    {
+        title: "Paw Pals Pet Visit",
+        imgUrl: "https://newt.vitas.com/-/media/images/locations-served/location-care-services/paw-pals-location-care-services.jpg?h=128&iar=0&w=128&hash=96F0E0B2653BC891199F612ECB363BF0"
+    }]
+
+    let wrapper=document.getElementsByClassName("wrapper");
+    for (let i = 0; i < comp2obj.length;i++){
+        // let item = `<div><img src="${comp2obj[i].imgUrl}" alt="${comp2obj[i].title} " /><h2>${comp2obj[i].title}</h2></div>`;
+        const card = document.createElement('div');
+        card.className = "containerr";
+        const image=document.createElement('img');
+        image.src = comp2obj[i].imgUrl;
+        image.style.width = "80px";
+        image.style.height = "80px";
+        image.className = "img";
+        const p = document.createElement('p');
+        p.innerHTML = `<p>${comp2obj[i].title}</p>`;
+        p.classList = "p";
+        wrapper[0].appendChild(card);
+        card.appendChild(image);
+        card.appendChild(p);
+    }
+</script>

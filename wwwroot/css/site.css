@@ -255,6 +255,63 @@ input[type=number] {
     text-align: center;
 }
 
+.main2{
+    border:1px solid red;
+    color:black;
+    /*width:100vw;*/
+    display:flex;
+    height:100%;
+    flex-direction:column;
+}
+
+.main2>.top-content{
+    border:1px solid black;
+    height:50%;
+}
+
+.main2>.bottom-content{
+    border:1px solid blue;
+    height:50%;
+    background-color:floralwhite;
+}
+
+.bottom-content>h2{
+    text-align:center;
+}
+
+.bottom-content>p{
+    text-align:center;
+}
+
+.wrapper{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.containerr{
+    width:25%;
+    padding:20px;
+    display:flex;
+    align-items:center;
+}
+
+.img{
+    border-radius:50%;
+    margin-right:10px;
+}
+
+.p {
+    font-size:18px;
+    /*font-weight:600;*/
+    margin:0 auto;
+}
+
+.img:hover{
+    transform:scale(1.1);
+    transition:all 0.3s ease-in-out;
+    cursor:pointer;
+}
+
 @media screen and (max-width:1048px) {
     .right {
         display: none;
