@@ -256,7 +256,6 @@ input[type=number] {
 }
 
 .main2{
-    border:1px solid red;
     color:black;
     /*width:100vw;*/
     display:flex;
@@ -264,19 +263,68 @@ input[type=number] {
     flex-direction:column;
 }
 
+.main2>h1{
+    font-size:36px;
+    text-transform:capitalize;
+    font-weight:600;
+    text-align:center;
+    margin-bottom:40px;
+}
+
 .main2>.top-content{
+    height:90vh;
+    display:flex;
     border:1px solid black;
-    height:50%;
+}
+
+
+.top-content>.left1{
+    width:40%;
+    height:100%;
+    position:relative;
+}
+
+.left1>iframe{
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.top-content > .right1 {
+    /*border: 1px solid red;*/
+    width: 60%;
+    height: 100%;
+}
+
+.right1 >.ulWrapper {
+    border: 1px solid red;
+    width:100%;
+}
+
+.ulWrapper>.ul{
+    border:1px solid green;
+    display:flex;
+    padding:10px;
+    gap:10px;
+}
+
+.ul > li {
+    list-style: none;
+    border: 1px solid yellow;
+    background-color: #4e288e;
+    color:white;
+    padding:10px;
+    border-radius:8px;
 }
 
 .main2>.bottom-content{
-    border:1px solid blue;
-    height:50%;
     background-color:floralwhite;
+    margin-top:50px;
 }
 
-.bottom-content>h2{
-    text-align:center;
+.bottom-content > h2 {
+    margin-top: 40px;
+    text-align: center;
 }
 
 .bottom-content>p{
@@ -311,6 +359,8 @@ input[type=number] {
     transition:all 0.3s ease-in-out;
     cursor:pointer;
 }
+
+
 
 @media screen and (max-width:1048px) {
     .right {
