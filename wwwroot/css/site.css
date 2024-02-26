@@ -255,12 +255,13 @@ input[type=number] {
     text-align: center;
 }
 
-.main2{
-    color:black;
+.main2 {
+    color: black;
     /*width:100vw;*/
-    display:flex;
-    height:100%;
-    flex-direction:column;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    background-color: #fefefe;
 }
 
 .main2>h1{
@@ -272,9 +273,10 @@ input[type=number] {
 }
 
 .main2>.top-content{
-    height:90vh;
+    height:750px;
     display:flex;
-    border:1px solid black;
+    gap:20px;
+    /*border:1px solid red;*/
 }
 
 
@@ -282,43 +284,73 @@ input[type=number] {
     width:40%;
     height:100%;
     position:relative;
+    padding:10px;
 }
 
 .left1>iframe{
-    height:100%;
+    height:98%;
     width:100%;
     position:absolute;
 }
+
+.cardWrapper{
+    /*padding:20px;*/
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+
+.left2{
+    width:65%;
+}
+
 
 .top-content > .right1 {
     /*border: 1px solid red;*/
     width: 60%;
     height: 100%;
+    padding: 10px;
 }
 
 .right1 >.ulWrapper {
-    border: 1px solid red;
     width:100%;
 }
 
 .ulWrapper>.ul{
-    border:1px solid green;
     display:flex;
-    padding:10px;
-    gap:10px;
+    gap:20px;
 }
 
 .ul > li {
     list-style: none;
-    border: 1px solid yellow;
+    /*background-color: #f7f9fb;*/
     background-color: #4e288e;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 22%;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
     color:white;
-    padding:10px;
-    border-radius:8px;
 }
 
+.cardWrapper > button {
+    color: #4e288e;
+}
+
+li:active {
+    background-color: #4e288e;
+    color:white;
+}
+
+
 .main2>.bottom-content{
-    background-color:floralwhite;
+    /*background-color:floralwhite;*/
     margin-top:50px;
 }
 
