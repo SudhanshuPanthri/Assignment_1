@@ -7,10 +7,10 @@
         <div class="right1">
             <div class="ulWrapper">
                 <ul class="ul">
-                    <li>All Location and Service Area</li>
-                    <li>Hospice Care at Home</li>
-                    <li>Inpatient Unit</li>
-                    <li>Offices & Home Medical Equipment</li>
+                    <li class="li">All Location and Service Area</li>
+                    <li class="li">Hospice Care at Home</li>
+                    <li class="li">Inpatient Unit</li>
+                    <li class="li">Offices & Home Medical Equipment</li>
                 </ul>
             </div>
             <div class="cardWrapper">
@@ -91,13 +91,13 @@
     function displayIndexButton() {
         preLoadCalculations();
         $(".btnWrapper button").remove();
-        $(".btnWrapper").append('<button onClick="prev();">Previous </button>');
+        // $(".btnWrapper").append('<button onClick="prev();">Previous </button>');
 
         for (let i = 1;i<=max_index;i++){
             $(".btnWrapper").append(`<button class="number" onClick="indexPagination(${i});" index="${i}"> ${i} </button>`);
         }
 
-        $(".btnWrapper").append('<button onClick="next();"> Next</button>');
+        // $(".btnWrapper").append('<button onClick="next();"> Next</button>');
         highlightIndex();
     }
 
@@ -210,21 +210,21 @@
         }
     }
 
-    function next() {
-        cardWrapper.innerHTML = '';
-        if (curr_index < max_index) {
-            curr_index++;
-            highlightIndex();
-        }
-    }
+    // function next() {
+    //     cardWrapper.innerHTML = '';
+    //     if (curr_index < max_index) {
+    //         curr_index++;
+    //         highlightIndex();
+    //     }
+    // }
 
-    function prev() {
-        cardWrapper.innerHTML = '';
-        if (curr_index > 1) {
-            curr_index--;
-            highlightIndex();
-        }
-    }
+    // function prev() {
+    //     cardWrapper.innerHTML = '';
+    //     if (curr_index > 1) {
+    //         curr_index--;
+    //         highlightIndex();
+    //     }
+    // }
 
     function indexPagination(index) {
         cardWrapper.innerHTML = '';
@@ -241,6 +241,7 @@
         var li = ($(this)[0]);
         if (li.innerText === "All Location and Service Area") {
             cardWrapper.innerHTML = '';
+            btnWrapper1.style.display = "flex";
             displayIndexButton();
         }
         else if (li.innerText === "Hospice Care at Home") {

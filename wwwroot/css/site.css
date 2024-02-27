@@ -343,10 +343,10 @@ input[type=number] {
     gap:20px;
 }
 
-.ul > li {
+.li {
     list-style: none;
-    /*background-color: #f7f9fb;*/
-    background-color: #4e288e;
+    background-color: #f7f9fb;
+    /*background-color: #4e288e;*/
     padding: 10px;
     border-radius: 8px;
     font-size: 14px;
@@ -357,17 +357,22 @@ input[type=number] {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    color:white;
+    color:black;
+}
+
+.li:hover{
+    background-color: #4e288e;
+    color: white;
 }
 
 .cardWrapper > button {
     color: #4e288e;
 }
 
-.liactive {
+/*.liactive {
     background-color: #4e288e;
     color: white;
-}
+}*/
 
 .main2>.bottom-content{
     /*background-color:floralwhite;*/
