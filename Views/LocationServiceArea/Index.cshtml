@@ -202,7 +202,7 @@
 
             category.style.padding = "10px";
             category.style.borderRadius = "6px";
-            category.style.fontSize = "12px";
+            category.style.fontSize = "10px";
             category.style.textTransform = "uppercase";
             category.style.margin = "10px 0";
             category.style.width = "25%";
@@ -233,6 +233,233 @@
     }
 
     displayIndexButton();
+
+    //handling li logic
+    let ulWrapper = $(".ulWrapper ul");
+    let btnWrapper1 = $(".btnWrapper")[0];
+    $(".ulWrapper ul li").on("click", function (event) {
+        var li = ($(this)[0]);
+        if (li.innerText === "All Location and Service Area") {
+            cardWrapper.innerHTML = '';
+            displayIndexButton();
+        }
+        else if (li.innerText === "Hospice Care at Home") {
+            const div=document.createElement('div');
+            const p = document.createElement('p');
+            cardWrapper.innerHTML = '';
+            p.innerHTML = "<p>Hospice care at home service areas are highlighted on the map within the purple border.</p>";
+            cardWrapper.appendChild(div);
+            div.appendChild(p);
+        }
+        else if (li.innerText === "Inpatient Unit") {
+            // li.classList.add("liactive");
+            cardsObj1 = filterInpatientUnit();
+            let len = cardsObj1.length;
+            if (len <= 4) {
+                btnWrapper1.style.display = "none";
+            }
+            cardWrapper.innerHTML = '';
+            for (let i = 0; i < len; i++) {
+                let newArr = filterInpatientUnit();
+                let div = document.createElement('div');
+                let left = document.createElement('div');
+                let right = document.createElement('div');
+                let category = document.createElement('span');
+                let h4 = document.createElement('span');
+                let p = document.createElement('p');
+                let btn1 = document.createElement('button');
+                let btn2 = document.createElement('button');
+
+                category.innerHTML = `<span>${cardsObj1[i].category}</span>`;
+                h4.innerHTML = `<span>${cardsObj1[i].heading}</span>`;
+                p.innerHTML = `<p>${cardsObj1[i].address}</p>`;
+
+                btn1.innerHTML = `<button>855.721.9145</button>`;
+                btn2.innerHTML = `<button>Directions</button>`;
+
+                div.style.display = "flex";
+                div.style.padding = "10px";
+                div.style.justifyContent = "center";
+                div.style.alignItems = "center";
+                div.style.flexDirection = 'row';
+                div.style.height = "160px";
+                div.style.width = "100%";
+                div.style.boxShadow = "rgba(149, 157, 165, 0.2) 0px 8px 24px";
+                div.style.borderRadius = "6px";
+
+                left.style.width = "65%";
+                left.style.textTransform = "capitalize";
+                left.style.display = "flex";
+                left.style.flexDirection = "column";
+                left.style.justifyContent = "flex-start";
+                left.style.alignContent = "center";
+
+                //button styles
+                btn1.style.padding = "10px";
+                // btn1.style.color = "#4e288e";
+                btn1.style.width = "120px";
+                btn1.style.fontSize = "14px";
+                btn1.style.borderRadius = "6px";
+                btn1.style.backgroundColor = "#f7f9fb";
+
+                btn2.style.padding = "10px";
+                // btn2.style.color = "#4e288e";
+                btn2.style.width = "120px";
+                btn2.style.fontSize = "14px";
+                btn2.style.borderRadius = "6px";
+                btn2.style.backgroundColor = "#f7f9fb";
+
+
+                right.style.display = "flex";
+                right.style.flexDirection = "column";
+                right.style.justifyContent = "center";
+                right.style.alignItems = "center";
+                right.style.width = "35%";
+                right.style.gap = "10px";
+
+                cardWrapper.appendChild(div);
+                div.appendChild(left);
+                div.appendChild(right);
+                left.appendChild(category);
+                left.appendChild(h4);
+                left.appendChild(p);
+                right.appendChild(btn1);
+                right.appendChild(btn2);
+
+                h4.style.fontSize = "20px";
+                // h4.style.marginTop = "40px";
+                p.style.fontSize = "14px";
+
+                if (cardsObj1[i].category === "inpatient unit") {
+                    category.style.backgroundColor = "#f7d499";
+                }
+                if (cardsObj1[i].category === "office") {
+                    category.style.backgroundColor = "#4e288e";
+                    category.style.color = "#fff";
+                }
+                if (cardsObj1[i].category === "home equipment") {
+                    category.style.backgroundColor = "#362f93";
+                    category.style.color = "#fff";
+                }
+                category.style.padding = "10px";
+                category.style.borderRadius = "6px";
+                category.style.fontSize = "10px";
+                category.style.textTransform = "uppercase";
+                category.style.margin = "10px 0";
+                category.style.width = "25%";
+                category.style.textAlign = "center"
+            }
+        }
+        else if (li.innerText === "Offices & Home Medical Equipment") {
+            cardsObj2 = filterOffice();
+            console.log(cardsObj2);
+            let len = cardsObj2.length;
+            if (len <= 4) {
+                btnWrapper1.style.display = "none";
+            }
+            cardWrapper.innerHTML = '';
+            for (let i = 0; i < len; i++) {
+                let newArr = filterInpatientUnit();
+                let div = document.createElement('div');
+                let left = document.createElement('div');
+                let right = document.createElement('div');
+                let category = document.createElement('span');
+                let h4 = document.createElement('span');
+                let p = document.createElement('p');
+                let btn1 = document.createElement('button');
+                let btn2 = document.createElement('button');
+
+                category.innerHTML = `<span>${cardsObj2[i].category}</span>`;
+                h4.innerHTML = `<span>${cardsObj2[i].heading}</span>`;
+                p.innerHTML = `<p>${cardsObj2[i].address}</p>`;
+
+                btn1.innerHTML = `<button>855.721.9145</button>`;
+                btn2.innerHTML = `<button>Directions</button>`;
+
+                div.style.display = "flex";
+                div.style.padding = "10px";
+                div.style.justifyContent = "center";
+                div.style.alignItems = "center";
+                div.style.flexDirection = 'row';
+                div.style.height = "160px";
+                div.style.width = "100%";
+                div.style.boxShadow = "rgba(149, 157, 165, 0.2) 0px 8px 24px";
+                div.style.borderRadius = "6px";
+
+                left.style.width = "65%";
+                left.style.textTransform = "capitalize";
+                left.style.display = "flex";
+                left.style.flexDirection = "column";
+                left.style.justifyContent = "flex-start";
+                left.style.alignContent = "center";
+
+                //button styles
+                btn1.style.padding = "10px";
+                // btn1.style.color = "#4e288e";
+                btn1.style.width = "120px";
+                btn1.style.fontSize = "14px";
+                btn1.style.borderRadius = "6px";
+                btn1.style.backgroundColor = "#f7f9fb";
+
+                btn2.style.padding = "10px";
+                // btn2.style.color = "#4e288e";
+                btn2.style.width = "120px";
+                btn2.style.fontSize = "14px";
+                btn2.style.borderRadius = "6px";
+                btn2.style.backgroundColor = "#f7f9fb";
+
+
+                right.style.display = "flex";
+                right.style.flexDirection = "column";
+                right.style.justifyContent = "center";
+                right.style.alignItems = "center";
+                right.style.width = "35%";
+                right.style.gap = "10px";
+
+                cardWrapper.appendChild(div);
+                div.appendChild(left);
+                div.appendChild(right);
+                left.appendChild(category);
+                left.appendChild(h4);
+                left.appendChild(p);
+                right.appendChild(btn1);
+                right.appendChild(btn2);
+
+                h4.style.fontSize = "20px";
+                // h4.style.marginTop = "40px";
+                p.style.fontSize = "14px";
+
+                if (cardsObj2[i].category === "inpatient unit") {
+                    category.style.backgroundColor = "#f7d499";
+                }
+                if (cardsObj2[i].category === "office") {
+                    category.style.backgroundColor = "#4e288e";
+                    category.style.color = "#fff";
+                }
+                if (cardsObj2[i].category === "home equipment") {
+                    category.style.backgroundColor = "#362f93";
+                    category.style.color = "#fff";
+                }
+                category.style.padding = "10px";
+                category.style.borderRadius = "6px";
+                category.style.fontSize = "10px";
+                category.style.textTransform = "uppercase";
+                category.style.margin = "10px 0";
+                category.style.width = "25%";
+                category.style.textAlign = "center"
+            }
+        }
+    });
+    
+    function filterInpatientUnit() {
+        const filteredArr=cardsObj.filter((item)=>item.category==="inpatient unit");
+        return filteredArr;
+    }
+
+    function filterOffice() {
+        const filteredArr = cardsObj.filter((item) => item.category === "office" || item.category === "home equipment");
+        return filteredArr;
+    }
 
     let comp2obj = [{
         title: "Hospise Care at home",

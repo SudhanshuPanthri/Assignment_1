@@ -364,11 +364,10 @@ input[type=number] {
     color: #4e288e;
 }
 
-li:active {
+.liactive {
     background-color: #4e288e;
-    color:white;
+    color: white;
 }
-
 
 .main2>.bottom-content{
     /*background-color:floralwhite;*/
