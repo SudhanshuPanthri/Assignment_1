@@ -16,14 +16,8 @@
             <div class="cardWrapper">
 
             </div>
-            @* <nav aria-label="Pagination">
-                <ul class="pagination text-center">
-                    <li class="pagination-previous disabled">Previous</li>
-                    <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
-                    <li><a href="#" aria-label="Page 2">2</a></li>
-                    <li class="pagination-next"><a href="#" aria-label="Next page">Next</a></li>
-                </ul>
-            </nav> *@
+            <div class="btnWrapper">
+            </div>
         </div>
     </div>
     <div class="bottom-content">
@@ -42,125 +36,203 @@
     $(document).foundation();
 
     let cardsObj = [{
+        index:1,
         heading: "VITAS Inpatient Hospice Center at Rockledge",
         address: "5425 S US Highway 1 Rockledge, FL 32955",
         category: "inpatient unit"
     },
     {
+        index:2,
         heading: "Barefoot Bay VITAS Hospice Office",
         address: "8000 Ron Beatty Blvd. Building B, Units 3 & 4 Barefoot Bay, FL 32976",
         category: "office"
     },
     {
+        index:3,
         heading: "Brevard VITAS Hospice Office",
         address: "4450 W Eau Gallie Blvd. Suite 250 Melbourne, FL 32934",
         category: "office"
     },
     {
+        index:4,
         heading: "Titusville VITAS Hospice Office",
         address: "1901 Jess Parrish Court Titusville, FL 32796",
         category: "office"
     },
-    // {
-    //     heading: "West Melbourne VITAS Home Medical Equipment",
-    //     address: "7500 Technology Drive Suite B West Melbourne, FL 32904",
-    //     category: "home equipment"
-    // }
+    {
+        index:5,
+        heading: "West Melbourne VITAS Home Medical Equipment",
+        address: "7500 Technology Drive Suite B West Melbourne, FL 32904",
+        category: "home equipment"
+    }
     ];
 
     let cardWrapper = document.querySelector(".cardWrapper");
-    for (let m = 0; m < cardsObj.length; m++) {
-        let div = document.createElement('div');
-        let left = document.createElement('div');
-        let right = document.createElement('div');
-        let category = document.createElement('span');
-        let h4 = document.createElement('span');
-        let p = document.createElement('p');
-        let btn1 = document.createElement('button');
-        let btn2 = document.createElement('button');
-
-        category.innerHTML = `<span>${cardsObj[m].category}</span>`;
-        h4.innerHTML = `<span>${cardsObj[m].heading}</span>`;
-        p.innerHTML = `<p>${cardsObj[m].address}</p>`;
-
-        btn1.innerHTML = `<button>855.721.9145</button>`;
-        btn2.innerHTML = `<button>Directions</button>`;
-
-        // left.className = '.left2';
-        // right.className = '.right2';"
-        //styles
-        div.style.display = "flex";
-        div.style.padding = "10px";
-        div.style.justifyContent = "center";
-        div.style.alignItems = "center";
-        div.style.flexDirection = 'row';
-        div.style.height = "160px";
-        div.style.width = "100%";
-        div.style.boxShadow = "rgba(149, 157, 165, 0.2) 0px 8px 24px";
-        div.style.borderRadius = "6px";
-
-        left.style.width = "65%";
-        left.style.textTransform = "capitalize";
-        left.style.display = "flex";
-        left.style.flexDirection = "column";
-        left.style.justifyContent = "flex-start";
-        left.style.alignContent = "center";
-
-        //button styles
-        btn1.style.padding = "10px";
-        // btn1.style.color = "#4e288e";
-        btn1.style.width = "120px";
-        btn1.style.fontSize = "14px";
-        btn1.style.borderRadius = "6px";
-        btn1.style.backgroundColor = "#f7f9fb";
-
-        btn2.style.padding = "10px";
-        // btn2.style.color = "#4e288e";
-        btn2.style.width = "120px";
-        btn2.style.fontSize = "14px";
-        btn2.style.borderRadius = "6px";
-        btn2.style.backgroundColor = "#f7f9fb";
+    
+    let arr = [];
+    let arrLength =0;
+    let s_index = 1;
+    let e_index = 0;
+    let card_size = 4;
+    let curr_index = 1;
+    let max_index = 0;
 
 
-        right.style.display = "flex";
-        right.style.flexDirection = "column";
-        right.style.justifyContent = "center";
-        right.style.alignItems="center";
-        right.style.width = "35%";
-        right.style.gap= "10px";
+    function preLoadCalculations() {
+        arr = cardsObj;
+        arrLength = arr.length;
+        max_index = arrLength / card_size;
 
-        cardWrapper.appendChild(div);
-        div.appendChild(left);
-        div.appendChild(right);
-        left.appendChild(category);
-        left.appendChild(h4);
-        left.appendChild(p);
-        right.appendChild(btn1);
-        right.appendChild(btn2);
-
-        h4.style.fontSize = "20px";
-        // h4.style.marginTop = "40px";    
-        p.style.fontSize = "14px";
-
-        if (cardsObj[m].category === "inpatient unit") 
-        { 
-            category.style.backgroundColor = "#f7d499";
+        if ((arrLength % card_size) > 0) {
+            max_index++;
         }
-        if (cardsObj[m].category === "office") {
-            category.style.backgroundColor = "#4e288e";
-            category.style.color = "#fff";
-        }
-
-        category.style.padding = "10px";
-        category.style.borderRadius = "6px";
-        category.style.fontSize = "12px";
-        category.style.textTransform = "uppercase";
-        category.style.margin = "10px 0";
-        category.style.width = "25%";
-        category.style.textAlign = "center";
-
     }
 
+    function displayIndexButton() {
+        preLoadCalculations();
+        $(".btnWrapper button").remove();
+        $(".btnWrapper").append('<button onClick="prev();">Previous </button>');
+
+        for (let i = 1;i<=max_index;i++){
+            $(".btnWrapper").append(`<button class="number" onClick="indexPagination(${i});" index="${i}"> ${i} </button>`);
+        }
+
+        $(".btnWrapper").append('<button onClick="next();"> Next</button>');
+        highlightIndex();
+    }
+
+    function highlightIndex() {
+        s_index = ((curr_index - 1) * card_size) + 1;
+        e_index = (s_index + card_size) - 1;
+        if (e_index > arrLength) {
+            e_index = arrLength;
+        }
+        $(".btnWrapper button").removeClass('active1');
+        $(".btnWrapper button[index='"+curr_index+"']").addClass('active1');
+
+        displayCards();
+    }
+
+    function displayCards() {
+        let card_start = s_index - 1;
+        let card_end = e_index;
+
+        for (let i = card_start; i < card_end; i++) {
+            let div = document.createElement('div');
+            let left = document.createElement('div');
+            let right = document.createElement('div');
+            let category = document.createElement('span');
+            let h4 = document.createElement('span');
+            let p = document.createElement('p');
+            let btn1 = document.createElement('button');
+            let btn2 = document.createElement('button');
+
+            category.innerHTML = `<span>${cardsObj[i].category}</span>`;
+            h4.innerHTML = `<span>${cardsObj[i].heading}</span>`;
+            p.innerHTML = `<p>${cardsObj[i].address}</p>`;
+
+            btn1.innerHTML = `<button>855.721.9145</button>`;
+            btn2.innerHTML = `<button>Directions</button>`;
+
+            div.style.display = "flex";
+            div.style.padding = "10px";
+            div.style.justifyContent = "center";
+            div.style.alignItems = "center";
+            div.style.flexDirection = 'row';
+            div.style.height = "160px";
+            div.style.width = "100%";
+            div.style.boxShadow = "rgba(149, 157, 165, 0.2) 0px 8px 24px";
+            div.style.borderRadius = "6px";
+
+            left.style.width = "65%";
+            left.style.textTransform = "capitalize";
+            left.style.display = "flex";
+            left.style.flexDirection = "column";
+            left.style.justifyContent = "flex-start";
+            left.style.alignContent = "center";
+
+            //button styles
+            btn1.style.padding = "10px";
+            // btn1.style.color = "#4e288e";
+            btn1.style.width = "120px";
+            btn1.style.fontSize = "14px";
+            btn1.style.borderRadius = "6px";
+            btn1.style.backgroundColor = "#f7f9fb";
+
+            btn2.style.padding = "10px";
+            // btn2.style.color = "#4e288e";
+            btn2.style.width = "120px";
+            btn2.style.fontSize = "14px";
+            btn2.style.borderRadius = "6px";
+            btn2.style.backgroundColor = "#f7f9fb";
+
+
+            right.style.display = "flex";
+            right.style.flexDirection = "column";
+            right.style.justifyContent = "center";
+            right.style.alignItems = "center";
+            right.style.width = "35%";
+            right.style.gap = "10px";
+
+            cardWrapper.appendChild(div);
+            div.appendChild(left);
+            div.appendChild(right);
+            left.appendChild(category);
+            left.appendChild(h4);
+            left.appendChild(p);
+            right.appendChild(btn1);
+            right.appendChild(btn2);
+
+            h4.style.fontSize = "20px";
+            // h4.style.marginTop = "40px";
+            p.style.fontSize = "14px";
+
+            if (cardsObj[i].category === "inpatient unit") {
+                category.style.backgroundColor = "#f7d499";
+            }
+            if (cardsObj[i].category === "office") {
+                category.style.backgroundColor = "#4e288e";
+                category.style.color = "#fff";
+            }
+            
+            if (cardsObj[i].category === "home equipment") {
+                category.style.backgroundColor = "#362f93";
+                category.style.color = "#fff";
+            }
+
+            category.style.padding = "10px";
+            category.style.borderRadius = "6px";
+            category.style.fontSize = "12px";
+            category.style.textTransform = "uppercase";
+            category.style.margin = "10px 0";
+            category.style.width = "25%";
+            category.style.textAlign = "center";
+        }
+    }
+
+    function next() {
+        cardWrapper.innerHTML = '';
+        if (curr_index < max_index) {
+            curr_index++;
+            highlightIndex();
+        }
+    }
+
+    function prev() {
+        cardWrapper.innerHTML = '';
+        if (curr_index > 1) {
+            curr_index--;
+            highlightIndex();
+        }
+    }
+
+    function indexPagination(index) {
+        cardWrapper.innerHTML = '';
+        curr_index = parseInt(index);
+        highlightIndex();
+    }
+
+    displayIndexButton();
 
     let comp2obj = [{
         title: "Hospise Care at home",

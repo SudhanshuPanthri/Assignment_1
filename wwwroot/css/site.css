@@ -305,12 +305,33 @@ input[type=number] {
     width:65%;
 }
 
+.btnWrapper{
+    position:absolute;
+    bottom:-10%;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+}
+
+.number{
+    width:30px;
+    height:30px;
+}
+
+.active1{
+    background-color:#4e288e;
+    color:white;
+    border-radius:50%;
+}
 
 .top-content > .right1 {
     /*border: 1px solid red;*/
     width: 60%;
     height: 100%;
     padding: 10px;
+    position:relative;
 }
 
 .right1 >.ulWrapper {
