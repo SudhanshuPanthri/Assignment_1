@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "vvZGMCglT0D17EU4O5PNbhpzCTiGEtAFILgXFjtRQz+R6J8a9UnWS2Ae/lDkhMOWs6ekJXHKVvVlH0FDiySLaA==",
+  "dgSpecHash": "+Uc7Fs5dlJxLaiioUszt9iz+0XMMq+QeFOvT2HFVLM42nZEKI67rTkpejyJxrZX180IXHR9tQ6Xih2uQEOst2A==",
   "success": true,
   "projectFilePath": "C:\\Projects\\.Net MVC Projects\\Assignment__1\\Assignment__1\\Assignment__1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\foundation-sites\\6.5.3\\foundation-sites.6.5.3.nupkg.sha512",
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\jquery\\2.2.0\\jquery.2.2.0.nupkg.sha512",
+    "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\microsoft.aspnet.webapi.client\\6.0.0\\microsoft.aspnet.webapi.client.6.0.0.nupkg.sha512",
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.1\\microsoft.aspnetcore.cryptography.internal.8.0.1.nupkg.sha512",
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.1\\microsoft.aspnetcore.cryptography.keyderivation.8.0.1.nupkg.sha512",
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\8.0.1\\microsoft.aspnetcore.identity.entityframeworkcore.8.0.1.nupkg.sha512",
@@ -51,6 +54,8 @@
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\system.composition\\6.0.0\\system.composition.6.0.0.nupkg.sha512",
@@ -65,7 +70,7 @@
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\system.formats.asn1\\5.0.0\\system.formats.asn1.5.0.0.nupkg.sha512",
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.24.0\\system.identitymodel.tokens.jwt.6.24.0.nupkg.sha512",
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\system.io.pipelines\\6.0.3\\system.io.pipelines.6.0.3.nupkg.sha512",
-    "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\system.reflection.metadata\\6.0.1\\system.reflection.metadata.6.0.1.nupkg.sha512",
@@ -83,7 +88,19 @@
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\system.threading.channels\\6.0.0\\system.threading.channels.6.0.0.nupkg.sha512",
     "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+    "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Sudhanshu Panthri\\.nuget\\packages\\what-input\\2.0.1\\what-input.2.0.1.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1602",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "foundation-sites 6.5.3 does not provide an inclusive lower bound for dependency what-input. An approximate best match of what-input 2.0.1 was resolved.",
+      "libraryId": "what-input",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
