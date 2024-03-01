@@ -9,8 +9,24 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Projects\\.Net MVC Projects\\Assignment__1\\Assignment__1\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Projects\\.Net MVC Projects\\Assignment__1\\Assignment__1\\wwwroot\\css\\style.min.css",
+      "PackagePath": "staticwebassets\\css\\style.min.css"
+    },
+    {
+      "Id": "C:\\Projects\\.Net MVC Projects\\Assignment__1\\Assignment__1\\wwwroot\\css\\style.scss",
+      "PackagePath": "staticwebassets\\css\\style.scss"
+    },
+    {
       "Id": "C:\\Projects\\.Net MVC Projects\\Assignment__1\\Assignment__1\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Projects\\.Net MVC Projects\\Assignment__1\\Assignment__1\\wwwroot\\js\\script.js",
+      "PackagePath": "staticwebassets\\js\\script.js"
     },
     {
       "Id": "C:\\Projects\\.Net MVC Projects\\Assignment__1\\Assignment__1\\wwwroot\\js\\site.js",
